@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <ProjectGuid>{C72F3A79-DA8E-4EC6-A14F-6C59650E8A7E}</ProjectGuid>
+    <RootNamespace>IG1App</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>IG1App</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\IGProjects.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\IGProjects.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="Camera.h" />
+    <ClInclude Include="Entidades\Box.h" />
+    <ClInclude Include="Entidades\BoxOutline.h" />
+    <ClInclude Include="Entidades\ColorMaterialEntity.h" />
+    <ClInclude Include="Entidades\CompoundEntity.h" />
+    <ClInclude Include="Entidades\Cone.h" />
+    <ClInclude Include="Entidades\Cube.h" />
+    <ClInclude Include="Entidades\Disk.h" />
+    <ClInclude Include="Entidades\Droid.h" />
+    <ClInclude Include="Entidades\EntityWithMaterial.h" />
+    <ClInclude Include="Entidades\EntityWithTexture.h" />
+    <ClInclude Include="Entidades\GlassParapet.h" />
+    <ClInclude Include="Entidades\Grass.h" />
+    <ClInclude Include="Entidades\Ground.h" />
+    <ClInclude Include="Entidades\IndexedBox.h" />
+    <ClInclude Include="Entidades\Photo.h" />
+    <ClInclude Include="Entidades\RegularPolygon.h" />
+    <ClInclude Include="Entidades\RGBCube.h" />
+    <ClInclude Include="Entidades\RGBRectangle.h" />
+    <ClInclude Include="Entidades\RGBTriangle.h" />
+    <ClInclude Include="Entidades\SingleColorEntity.h" />
+    <ClInclude Include="Entidades\SnowMan.h" />
+    <ClInclude Include="Entidades\Sphere.h" />
+    <ClInclude Include="Entidades\SphereWithTexture.h" />
+    <ClInclude Include="Entidades\Star3D.h" />
+    <ClInclude Include="Entidades\Torus.h" />
+    <ClInclude Include="Entity.h" />
+    <ClInclude Include="Escenas\Scene1.h" />
+    <ClInclude Include="Escenas\Scene10.h" />
+    <ClInclude Include="Escenas\Scene2.h" />
+    <ClInclude Include="Escenas\Scene3.h" />
+    <ClInclude Include="Escenas\Scene4.h" />
+    <ClInclude Include="Escenas\Scene5.h" />
+    <ClInclude Include="Escenas\Scene6.h" />
+    <ClInclude Include="Escenas\Scene7.h" />
+    <ClInclude Include="Escenas\Scene8.h" />
+    <ClInclude Include="Escenas\Scene9.h" />
+    <ClInclude Include="IG1App.h" />
+    <ClInclude Include="IndexMesh.h" />
+    <ClInclude Include="Light.h" />
+    <ClInclude Include="Material.h" />
+    <ClInclude Include="Mesh.h" />
+    <ClInclude Include="Image.h" />
+    <ClInclude Include="Scene.h" />
+    <ClInclude Include="Shader.h" />
+    <ClInclude Include="Texture.h" />
+    <ClInclude Include="TextureManager.h" />
+    <ClInclude Include="Viewport.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="Entidades\Box.cpp" />
+    <ClCompile Include="Entidades\BoxOutline.cpp" />
+    <ClCompile Include="Entidades\ColorMaterialEntity.cpp" />
+    <ClCompile Include="Entidades\CompoundEntity.cpp" />
+    <ClCompile Include="Entidades\Cone.cpp" />
+    <ClCompile Include="Entidades\Cube.cpp" />
+    <ClCompile Include="Entidades\Disk.cpp" />
+    <ClCompile Include="Entidades\Droid.cpp" />
+    <ClCompile Include="Entidades\EntityWithMaterial.cpp" />
+    <ClCompile Include="Entidades\EntityWithTexture.cpp" />
+    <ClCompile Include="Entidades\GlassParapet.cpp" />
+    <ClCompile Include="Entidades\Grass.cpp" />
+    <ClCompile Include="Entidades\Ground.cpp" />
+    <ClCompile Include="Entidades\IndexedBox.cpp" />
+    <ClCompile Include="Entidades\Photo.cpp" />
+    <ClCompile Include="Entidades\RegularPolygon.cpp" />
+    <ClCompile Include="Entidades\RGBCube.cpp" />
+    <ClCompile Include="Entidades\RGBRectangle.cpp" />
+    <ClCompile Include="Entidades\RGBTriangle.cpp" />
+    <ClCompile Include="Entidades\SingleColorEntity.cpp" />
+    <ClCompile Include="Entidades\SnowMan.cpp" />
+    <ClCompile Include="Entidades\Sphere.cpp" />
+    <ClCompile Include="Entidades\SphereWithTexture.cpp" />
+    <ClCompile Include="Entidades\Star3D.cpp" />
+    <ClCompile Include="Entidades\Torus.cpp" />
+    <ClCompile Include="Entity.cpp" />
+    <ClCompile Include="Escenas\Scene1.cpp" />
+    <ClCompile Include="Escenas\Scene10.cpp" />
+    <ClCompile Include="Escenas\Scene2.cpp" />
+    <ClCompile Include="Escenas\Scene3.cpp" />
+    <ClCompile Include="Escenas\Scene4.cpp" />
+    <ClCompile Include="Escenas\Scene5.cpp" />
+    <ClCompile Include="Escenas\Scene6.cpp" />
+    <ClCompile Include="Escenas\Scene7.cpp" />
+    <ClCompile Include="Escenas\Scene8.cpp" />
+    <ClCompile Include="Escenas\Scene9.cpp" />
+    <ClCompile Include="IG1App.cpp" />
+    <ClCompile Include="IndexMesh.cpp" />
+    <ClCompile Include="Light.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Material.cpp" />
+    <ClCompile Include="Mesh.cpp" />
+    <ClCompile Include="Image.cpp" />
+    <ClCompile Include="Scene.cpp" />
+    <ClCompile Include="Shader.cpp" />
+    <ClCompile Include="Texture.cpp" />
+    <ClCompile Include="TextureManager.cpp" />
+    <ClCompile Include="Viewport.cpp" />
+    <ClCompile Include="..\libs\glad\src\glad.c" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

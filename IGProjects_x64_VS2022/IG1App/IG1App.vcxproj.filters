@@ -174,6 +174,9 @@
     <ClInclude Include="Escenas\Scene10.h">
       <Filter>Archivos de encabezado\Escenas</Filter>
     </ClInclude>
+    <ClInclude Include="Escenas\SceneFinal.h">
+      <Filter>Archivos de encabezado\Escenas</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Scene.cpp">
@@ -324,6 +327,9 @@
       <Filter>Archivos de código fuente</Filter>
     </ClCompile>
     <ClCompile Include="Escenas\Scene10.cpp">
+      <Filter>Archivos de código fuente\Escenas</Filter>
+    </ClCompile>
+    <ClCompile Include="Escenas\SceneFinal.cpp">
       <Filter>Archivos de código fuente\Escenas</Filter>
     </ClCompile>
   </ItemGroup>

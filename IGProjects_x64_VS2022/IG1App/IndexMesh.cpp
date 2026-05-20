@@ -207,3 +207,88 @@ IndexMesh* IndexMesh::generateSphere(GLdouble radius, GLuint nParallel, GLuint n
 
 	return IndexMesh::generateByRevolution(perfil, nMeridians);
 }
+
+// --- PROYECTO FINAL ---
+// Requisito 1: Malla indexada a mano (que no sea un cubo normal)
+IndexMesh* IndexMesh::generateBench(GLdouble w, GLdouble sh, GLdouble bh, GLdouble d, GLdouble th)
+{
+	IndexMesh* mesh = new IndexMesh();
+	mesh->mPrimitive = GL_TRIANGLES;
+
+	// Es un perfil en L extruido. Son 6 vértices para el lado izquierdo y 6 para el derecho.
+	mesh->mNumVertices = 12;
+	mesh->vVertices.reserve(mesh->mNumVertices);
+
+	// Vértices del lateral izquierdo (-X)
+	mesh->vVertices.emplace_back(-w / 2, 0.0, d / 2);        // V0: Abajo alante
+	mesh->vVertices.emplace_back(-w / 2, sh, d / 2);         // V1: Borde del asiento
+	mesh->vVertices.emplace_back(-w / 2, sh, -d / 2 + th);   // V2: Esquina donde se junta asiento y respaldo
+	mesh->vVertices.emplace_back(-w / 2, bh, -d / 2 + th);   // V3: Arriba del respaldo (alante)
+	mesh->vVertices.emplace_back(-w / 2, bh, -d / 2);        // V4: Arriba del respaldo (atrás)
+	mesh->vVertices.emplace_back(-w / 2, 0.0, -d / 2);       // V5: Abajo atrás
+
+	// Vértices del lateral derecho (+X). Iguales pero en el lado positivo.
+	mesh->vVertices.emplace_back(w / 2, 0.0, d / 2);         // V6
+	mesh->vVertices.emplace_back(w / 2, sh, d / 2);          // V7
+	mesh->vVertices.emplace_back(w / 2, sh, -d / 2 + th);    // V8
+	mesh->vVertices.emplace_back(w / 2, bh, -d / 2 + th);    // V9
+	mesh->vVertices.emplace_back(w / 2, bh, -d / 2);         // V10
+	mesh->vVertices.emplace_back(w / 2, 0.0, -d / 2);        // V11
+
+	// Meto los índices de los 12 triángulos a mano.
+	// Ojo al orden (siempre en sentido antihorario) para que las normales de Newell salgan bien.
+	mesh->vIndexes = {
+		// Lateral izquierdo
+		0, 2, 1,   0, 5, 2,   5, 4, 2,   4, 3, 2,
+		// Lateral derecho
+		6, 7, 8,   6, 8, 11,  11, 8, 9,  11, 9, 10,
+		// Asiento cara frontal
+		0, 6, 7,   0, 7, 1,
+		// Asiento cara superior (donde te sientas)
+		1, 7, 8,   1, 8, 2,
+		// Respaldo cara frontal (donde apoyas la espalda)
+		2, 8, 9,   2, 9, 3,
+		// Respaldo arriba del todo
+		3, 9, 10,  3, 10, 4,
+		// Respaldo por detrás
+		4, 10, 11, 4, 11, 5,
+		// Base del banco (por si la cámara baja mucho, que no se vea hueco)
+		5, 11, 6,  5, 6, 0
+	};
+
+	// Aprovecho el método de Newell que ya teníamos en la práctica anterior
+	mesh->buildNormalVectors();
+	return mesh;
+}
+// Requisito 2: Malla de revolución (Barril)
+IndexMesh* IndexMesh::generateBarrel(GLdouble r, GLdouble h, GLuint nMeridians)
+{
+	std::vector<glm::vec2> profile;
+
+	// Dibujo la silueta del barril (de abajo hacia arriba)
+	// Como la función generateByRevolution tiene en cuenta si x==0 para cerrar la tapa, empiezo en x=0
+	profile.push_back(glm::vec2(0.0f, 0.0f));         // Centro de la base de abajo
+	profile.push_back(glm::vec2(r * 0.85f, 0.0f));    // Borde de la base (un poco más estrecho que la panza)
+	profile.push_back(glm::vec2(r, h * 0.5f));        // La panza del barril (mitad de altura, radio máximo)
+	profile.push_back(glm::vec2(r * 0.85f, h));       // Borde superior
+	profile.push_back(glm::vec2(0.0f, h));            // Centro de la tapa superior (para cerrarlo)
+
+	// Le paso mi perfil a la función que lo rota 360 grados
+	return IndexMesh::generateByRevolution(profile, nMeridians);
+}
+
+// Requisito 2: Malla de revolución (Maceta)
+IndexMesh* IndexMesh::generatePot(GLdouble r, GLdouble h, GLuint nMeridians)
+{
+	std::vector<glm::vec2> profile;
+
+	// Silueta de una maceta rústica
+	profile.push_back(glm::vec2(0.0f, 0.0f));         // Centro de la base
+	profile.push_back(glm::vec2(r * 0.6f, 0.0f));     // Borde de la base (las macetas son estrechas por abajo)
+	profile.push_back(glm::vec2(r, h * 0.7f));        // Se va abriendo hasta arriba
+	profile.push_back(glm::vec2(r * 0.9f, h * 0.8f)); // Cuello un poco más hundido
+	profile.push_back(glm::vec2(r * 0.95f, h));       // Reborde superior
+	profile.push_back(glm::vec2(0.0f, h));            // Lo cierro por arriba plano (simulando que está llena de tierra)
+
+	return IndexMesh::generateByRevolution(profile, nMeridians);
+}

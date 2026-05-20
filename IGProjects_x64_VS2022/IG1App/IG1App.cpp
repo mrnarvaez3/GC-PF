@@ -12,6 +12,7 @@
 #include "Escenas/Scene8.h"
 #include "Escenas/Scene9.h"
 #include "Escenas/Scene10.h"
+#include "Escenas/SceneFinal.h"
 #include "Texture.h"
 #include "Entidades/ColorMaterialEntity.h"
 
@@ -97,7 +98,7 @@ IG1App::init()
 	mCamera = new Camera(mViewPort);
 	mCamera2 = new Camera(mViewPort);
 	currentCamera = mCamera;
-	mScenes.push_back(new Scene10);
+	mScenes.push_back(new SceneFinal);
 
 	// Apartado 6
 	mScenes.push_back(new Scene1);

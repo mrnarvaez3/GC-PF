@@ -106,6 +106,7 @@
     <ClInclude Include="Escenas\Scene7.h" />
     <ClInclude Include="Escenas\Scene8.h" />
     <ClInclude Include="Escenas\Scene9.h" />
+    <ClInclude Include="Escenas\SceneFinal.h" />
     <ClInclude Include="IG1App.h" />
     <ClInclude Include="IndexMesh.h" />
     <ClInclude Include="Light.h" />
@@ -156,6 +157,7 @@
     <ClCompile Include="Escenas\Scene7.cpp" />
     <ClCompile Include="Escenas\Scene8.cpp" />
     <ClCompile Include="Escenas\Scene9.cpp" />
+    <ClCompile Include="Escenas\SceneFinal.cpp" />
     <ClCompile Include="IG1App.cpp" />
     <ClCompile Include="IndexMesh.cpp" />
     <ClCompile Include="Light.cpp" />

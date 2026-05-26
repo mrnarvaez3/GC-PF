@@ -70,6 +70,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Camera.h" />
+    <ClInclude Include="Entidades\Barrel.h" />
+    <ClInclude Include="Entidades\Bench.h" />
     <ClInclude Include="Entidades\Box.h" />
     <ClInclude Include="Entidades\BoxOutline.h" />
     <ClInclude Include="Entidades\ColorMaterialEntity.h" />
@@ -84,17 +86,28 @@
     <ClInclude Include="Entidades\Grass.h" />
     <ClInclude Include="Entidades\Ground.h" />
     <ClInclude Include="Entidades\IndexedBox.h" />
+    <ClInclude Include="Entidades\Lake.h" />
+    <ClInclude Include="Entidades\Lantern.h" />
+    <ClInclude Include="Entidades\LowPolyBox.h" />
+    <ClInclude Include="Entidades\LowPolyCone.h" />
+    <ClInclude Include="Entidades\LowPolyDisk.h" />
+    <ClInclude Include="Entidades\LowPolyEntity.h" />
+    <ClInclude Include="Entidades\LowPolySphere.h" />
+    <ClInclude Include="Entidades\Mountain.h" />
     <ClInclude Include="Entidades\Photo.h" />
     <ClInclude Include="Entidades\RegularPolygon.h" />
     <ClInclude Include="Entidades\RGBCube.h" />
     <ClInclude Include="Entidades\RGBRectangle.h" />
     <ClInclude Include="Entidades\RGBTriangle.h" />
     <ClInclude Include="Entidades\SingleColorEntity.h" />
+    <ClInclude Include="Entidades\Skybox.h" />
     <ClInclude Include="Entidades\SnowMan.h" />
     <ClInclude Include="Entidades\Sphere.h" />
     <ClInclude Include="Entidades\SphereWithTexture.h" />
     <ClInclude Include="Entidades\Star3D.h" />
     <ClInclude Include="Entidades\Torus.h" />
+    <ClInclude Include="Entidades\WaterEntity.h" />
+    <ClInclude Include="Entidades\WaterMill.h" />
     <ClInclude Include="Entity.h" />
     <ClInclude Include="Escenas\Scene1.h" />
     <ClInclude Include="Escenas\Scene10.h" />
@@ -121,6 +134,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="CustomMeshes.cpp" />
+    <ClCompile Include="Entidades\Barrel.cpp" />
+    <ClCompile Include="Entidades\Bench.cpp" />
     <ClCompile Include="Entidades\Box.cpp" />
     <ClCompile Include="Entidades\BoxOutline.cpp" />
     <ClCompile Include="Entidades\ColorMaterialEntity.cpp" />
@@ -135,17 +151,28 @@
     <ClCompile Include="Entidades\Grass.cpp" />
     <ClCompile Include="Entidades\Ground.cpp" />
     <ClCompile Include="Entidades\IndexedBox.cpp" />
+    <ClCompile Include="Entidades\Lake.cpp" />
+    <ClCompile Include="Entidades\Lantern.cpp" />
+    <ClCompile Include="Entidades\LowPolyBox.cpp" />
+    <ClCompile Include="Entidades\LowPolyCone.cpp" />
+    <ClCompile Include="Entidades\LowPolyDisk.cpp" />
+    <ClCompile Include="Entidades\LowPolyEntity.cpp" />
+    <ClCompile Include="Entidades\LowPolySphere.cpp" />
+    <ClCompile Include="Entidades\Mountain.cpp" />
     <ClCompile Include="Entidades\Photo.cpp" />
     <ClCompile Include="Entidades\RegularPolygon.cpp" />
     <ClCompile Include="Entidades\RGBCube.cpp" />
     <ClCompile Include="Entidades\RGBRectangle.cpp" />
     <ClCompile Include="Entidades\RGBTriangle.cpp" />
     <ClCompile Include="Entidades\SingleColorEntity.cpp" />
+    <ClCompile Include="Entidades\Skybox.cpp" />
     <ClCompile Include="Entidades\SnowMan.cpp" />
     <ClCompile Include="Entidades\Sphere.cpp" />
     <ClCompile Include="Entidades\SphereWithTexture.cpp" />
     <ClCompile Include="Entidades\Star3D.cpp" />
     <ClCompile Include="Entidades\Torus.cpp" />
+    <ClCompile Include="Entidades\WaterEntity.cpp" />
+    <ClCompile Include="Entidades\WaterMill.cpp" />
     <ClCompile Include="Entity.cpp" />
     <ClCompile Include="Escenas\Scene1.cpp" />
     <ClCompile Include="Escenas\Scene10.cpp" />

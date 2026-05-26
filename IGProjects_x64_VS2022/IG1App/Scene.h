@@ -23,7 +23,8 @@ public:
 
 	virtual void init();
 
-	void render(Camera const& cam) const;
+	//void render(Camera const& cam) const;
+	virtual void render(Camera const& cam) const;
 	virtual void update();
 
 	virtual bool handleEvents(unsigned int key);

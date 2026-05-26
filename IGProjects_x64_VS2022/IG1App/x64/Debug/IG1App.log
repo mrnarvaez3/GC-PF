@@ -1,0 +1,23 @@
+﻿  Barrel.cpp
+  Bench.cpp
+  Lantern.cpp
+  LowPolyBox.cpp
+  LowPolyCone.cpp
+  LowPolyDisk.cpp
+  LowPolyEntity.cpp
+  LowPolySphere.cpp
+  Skybox.cpp
+  WaterEntity.cpp
+  WaterMill.cpp
+  SceneFinal.cpp
+C:\Users\Roberto Narvaez\Documents\Maestría\GC_FINAL\IGProjects_x64_VS2022\IG1App\Entidades\WaterMill.h(1,1): warning C4067: símbolos (token) inesperados después de la directiva del preprocesador; se esperaba una nueva línea
+  (compilando archivo de origen "Entidades/WaterMill.cpp")
+  
+C:\Users\Roberto Narvaez\Documents\Maestría\GC_FINAL\IGProjects_x64_VS2022\IG1App\Entidades\Lantern.cpp(28,17): warning C4244: 'inicializando': conversión de 'GLdouble' a 'GLfloat'; posible pérdida de datos
+C:\Users\Roberto Narvaez\Documents\Maestría\GC_FINAL\IGProjects_x64_VS2022\IG1App\Entidades\Lantern.cpp(29,17): warning C4244: 'inicializando': conversión de 'GLdouble' a 'GLfloat'; posible pérdida de datos
+C:\Users\Roberto Narvaez\Documents\Maestría\GC_FINAL\IGProjects_x64_VS2022\IG1App\Entidades\Lantern.cpp(34,17): warning C4244: 'inicializando': conversión de 'GLdouble' a 'GLfloat'; posible pérdida de datos
+C:\Users\Roberto Narvaez\Documents\Maestría\GC_FINAL\IGProjects_x64_VS2022\IG1App\Entidades\Lantern.cpp(43,17): warning C4244: 'inicializando': conversión de 'GLdouble' a 'GLfloat'; posible pérdida de datos
+C:\Users\Roberto Narvaez\Documents\Maestría\GC_FINAL\IGProjects_x64_VS2022\IG1App\Entidades\WaterMill.h(1,1): warning C4067: símbolos (token) inesperados después de la directiva del preprocesador; se esperaba una nueva línea
+  (compilando archivo de origen "Escenas/SceneFinal.cpp")
+  
+  IG1App.vcxproj -> C:\Users\Roberto Narvaez\Documents\Maestría\GC_FINAL\IGProjects_x64_VS2022\bin\IG1AppDebug.exe

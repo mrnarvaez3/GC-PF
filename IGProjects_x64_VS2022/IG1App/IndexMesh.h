@@ -1,3 +1,4 @@
+#pragma once
 #include "Mesh.h"
 #include <numbers>
 
@@ -18,10 +19,8 @@ public:
 	static IndexMesh* generateIndexedBox8(GLdouble l);
 	static IndexMesh* generateIndexedBox(GLdouble l);
 	static IndexMesh* generateSphere(GLdouble radius, GLuint nParallel, GLuint nMeridians);
-	// para el proyecto final
-	static IndexMesh* generateBench(GLdouble w, GLdouble sh, GLdouble bh, GLdouble d, GLdouble th);
-	static IndexMesh* generateBarrel(GLdouble r, GLdouble h, GLuint nMeridians);
-	static IndexMesh* generatePot(GLdouble r, GLdouble h, GLuint nMeridians);
+	static IndexMesh* generateBench(GLdouble l);
+	static IndexMesh* generateWaterPlane(GLdouble width, GLdouble depth, GLuint subdivs);
 private:
 	std::vector<GLuint> vIndexes;
 	GLuint mIBO;	

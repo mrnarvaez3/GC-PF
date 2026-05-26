@@ -56,7 +56,7 @@ public:
 	void setCenital();
 
 protected:
-	float dis = 500.0f;
+	float dis = 5000.0f;
 	glm::vec3 mEye = {0.0, 0.0, dis}; // camera's position
 	glm::vec3 mLook = {0.0, 0.0, 0.0};  // target's position
 	glm::vec3 mUp = {0.0, 1.0, 0.0};    // the up vector
@@ -73,7 +73,7 @@ protected:
 	void uploadPM() const; // transfers projMat to the GPU
 
 	GLfloat xRight, xLeft, yTop, yBot;     // size of scene visible area
-	GLfloat mNearVal = 200, mFarVal = 10000; // view volume
+	GLfloat mNearVal = 1, mFarVal = 10000; // view volume
 	GLfloat mScaleFact = 1;                // scale factor
 	bool bOrto = true;                      // orthogonal or perspective projection
 

@@ -78,7 +78,7 @@ protected:
 	int mWinW = 800;               // window's width
 	int mWinH = 600;               // window's height
 
-	const double FRAME_DURATION = 0.1;
+	const double FRAME_DURATION = 0.03;
 	bool mUpdateEnabled = false;
 	double mNextUpdate = 0;
 

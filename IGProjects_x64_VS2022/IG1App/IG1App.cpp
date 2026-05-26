@@ -98,8 +98,8 @@ IG1App::init()
 	mCamera = new Camera(mViewPort);
 	mCamera2 = new Camera(mViewPort);
 	currentCamera = mCamera;
+	//mScenes.push_back(new Scene10);
 	mScenes.push_back(new SceneFinal);
-
 	// Apartado 6
 	mScenes.push_back(new Scene1);
 	mScenes.push_back(new Scene2);
@@ -110,6 +110,7 @@ IG1App::init()
 	mScenes.push_back(new Scene7);
 	mScenes.push_back(new Scene8);
 	mScenes.push_back(new Scene9);
+
 
 	currentCamera->set2D();
 
